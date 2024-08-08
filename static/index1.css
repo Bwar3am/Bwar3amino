@@ -74,8 +74,15 @@ body {
 
 }
 
-.footer h5{
-    color: aliceblue;
+.footer a{
+    padding: 30px;
+    text-decoration: none;
+}
+
+
+.footer a:hover{
+    background-color:rgb(0, 8, 14);
+    color: rgb(0, 255, 4);
 }
 
 .row a{
