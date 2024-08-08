@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Bebas Neue';font-size: 22px;
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+}
+
+.navbar{
+    display: flex;
+    background-color: black;
+}
+
+
+.navbar a{
+    padding: 20px;
+}
+
+.navbar a:hover{
+    background-color:rgb(0, 8, 14);
+    color: rgb(0, 255, 4);
+}
+
+
+
+.header{
+    text-align: center;
+    background-color: rgb(14, 14, 14);
+    color: beige;
+    padding: 10px;
+    background-image: url("dark.jpg");
+}
+
+.header p{
+    font-size: 15px;
+}
+
+.header img{
+    border-radius: 50%;
+    width: 20%;
+}
+
+
+.flex-container {
+
+    flex: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: gray;
+    padding-bottom: 300px;
+}
+
+.flex-container > div {
+    margin: 40px;
+    text-align: center;
+    width: 33.33%;
+    
+    
+}
+
+/* .footer{
+    text-align: center;
+    background-color: black;
+    color: antiquewhite;
+    margin: 0;
+    padding: 20px;
+
+    
+} 
+
+
+.footer a{
+    padding: 20px;
+    margin: 0;
+}
+
+
+.footer a:hover{
+    background-color:rgb(0, 8, 14);
+    color: rgb(0, 255, 4);
+} */
+/* 
+.footer {
+    flex-direction: row;
+    padding: 5px;
+    text-align: center;
+    background-color: black;
+
+}
+
+.footer h5{
+    color: aliceblue;
+} */
+
+.footer{
+    flex-direction: row-reverse;
+}
+
+.footer a:hover{
+    background-color:rgb(0, 8, 14);
+    color: rgb(0, 255, 4);
+}
+
+@media screen and (max-width: 700px) {
+    .row, .navbar {   
+      flex-direction: column;
+    }
+}
