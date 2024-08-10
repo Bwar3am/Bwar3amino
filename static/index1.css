@@ -68,15 +68,17 @@ body {
 
 /* Footer */
 .footer {
-    padding: 5px;
     text-align: center;
-    background-color: black;
+    background-color: rgb(2, 2, 2);
+    margin: 0;
+    padding: 20px;
 
 }
 
 .footer a{
-    padding: 30px;
+    padding: 40px;
     text-decoration: none;
+    margin: 0;
 }
 
 
