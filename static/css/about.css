@@ -31,7 +31,7 @@ body {
     background-color: rgb(14, 14, 14);
     color: beige;
     padding: 10px;
-    background-image: url("dark.jpg");
+    background: url("/static/pics/dark.jpg");
 }
 
 .header p{
