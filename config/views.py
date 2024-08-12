@@ -6,7 +6,9 @@ from .models import *
 
 
 def home(request):
-    return render(request , "index1.html")
+    info = blog.objects.all()
+    context = {"info":info}
+    return render(request , "index1.html" , context)
 
 
 def about(request):
