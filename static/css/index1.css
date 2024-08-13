@@ -38,10 +38,12 @@ body {
 
 
 
+
+
 .row{
     display: flex;
     flex-wrap: wrap;
-    background-color: #625d5d;
+    background-color: #090909;
 }
 
 
@@ -60,11 +62,19 @@ body {
 }
 
 
-/* .fakeimg {
-    background-color: #aaa;
-    width: 100%;
-    padding: 20px;
-} */
+div.gallery {
+    margin: 10px;
+    border: 1px solid #ccc;
+    float: left;
+    width:10%;
+    border-radius: 10px;
+    padding: 5px;
+    max-width: 70%;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
 
 /* Footer */
 .footer {
