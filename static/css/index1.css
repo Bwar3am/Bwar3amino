@@ -106,7 +106,10 @@ div.gallery {
     color: black;
 }
 
-
+.fakeimg img{
+    width: 40%;
+    border-radius: 50%;
+}
 
 
 

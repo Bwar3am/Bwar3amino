@@ -15,7 +15,7 @@
 <body>
    
     <div class="heder">
-        <h1>Welcome to My Blog</h1>
+        <h1>Bwar3am blog</h1>
     </div>
     
     <div class="navbar">
@@ -30,18 +30,23 @@
     
     <div class="row">
         <div class="side">
-            <a href="{% url "about" %}"><h2>About Me</h2></a>
-            <h5>for reading more about me please click on the above link</h5>
-            <div class="fakeimg" style="height:200px;">Image</div>
-            <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-            <h3>More Text</h3>
-            <p>Lorem ipsum dolor sit ame.</p>
+            <a href="{% url "about" %}"><h2>About Author</h2></a>
+            <div class="fakeimg" style="">
+                <img src="{%static 'pics/Bwar3am.jpg'%} " alt="amoobarsam">
+            </div> 
+            <p>Barsam is an electrical engineering student and loves python and he is currently working with django to developing webapplications</p>
+            <p>if you wnat to know more about him click bellow link</p>
+            <a href="{% url "about" %}">abot barsam</a>
+            
+            {% comment %} <div class="fakeimg" style="height:60px;">Image</div><br>
             <div class="fakeimg" style="height:60px;">Image</div><br>
-            <div class="fakeimg" style="height:60px;">Image</div><br>
-            <div class="fakeimg" style="height:60px;">Image</div>
+            <div class="fakeimg" style="height:60px;">Image</div>  {% endcomment %}
         </div>
 
         <div class="main">
+
+            <h1>Recent Blogs</h1>
+            <br>
             {% for blogs in info  %}
             <h2>{{blogs.title}}</h2>
             <h5>{{blogs.time_created}}</h5>
