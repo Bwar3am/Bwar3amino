@@ -46,14 +46,15 @@
             <h2>{{blogs.title}}</h2>
             <h5>{{blogs.time_created}}</h5>
             <h5>{{blogs.date}}</h5>
-            
+            <div class="gallery">
+                <br>
+                <img src="{{blogs.image}}" alt="the barsam">
+            </div>
+           
             <div class="bodyy">
                 <h4>{{blogs.body}}</h4>
             </div>
             
-            <div class="gallery">
-                <img src="{{blogs.image}}" alt="the barsam">
-            </div>
 
            
             {% endfor %}
