@@ -63,30 +63,28 @@ body {
 
 
 div.gallery {
-    margin: 10px;
-    border: 1px solid #ccc;
+    /* margin: 10px; */
     float: left;
-    width:10%;
-    border-radius: 10px;
-    padding: 5px;
-    max-width: 70%;
+    width: 100%;
+    padding: 6px;
+    max-width: 100%;
 }
 
-div.gallery:hover {
-  border: 1px solid #777;
-}
+/* div.gallery:hover {
+   border: 1px solid #777; 
+}  */
 
 /* Footer */
 .footer {
     text-align: center;
     background-color: rgb(2, 2, 2);
     margin: 0;
-    padding: 20px;
+    padding-top: 40px;
 
 }
 
 .footer a{
-    padding: 40px;
+    padding: 20px;
     text-decoration: none;
     margin: 0;
 }
@@ -95,12 +93,21 @@ div.gallery:hover {
 .footer a:hover{
     background-color:rgb(0, 8, 14);
     color: rgb(0, 255, 4);
+} 
+
+.footer p{
+    color: aliceblue;
+    padding-bottom: 5px;
+
 }
 
 .row a{
     text-decoration: none;
     color: black;
 }
+
+
+
 
 
 @media screen and (max-width: 700px) {
