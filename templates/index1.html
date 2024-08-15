@@ -45,7 +45,7 @@
 
         <div class="main">
 
-            <h1>Recent Blogs</h1>
+            <a href="{% url "content" %}"><h1>Recent Blogs</h1></a>
             <br>
             {% for blogs in info  %}
             <h2>{{blogs.title}}</h2>

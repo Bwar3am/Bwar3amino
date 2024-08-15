@@ -1,8 +1,9 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="index1.css">
+    <link rel="stylesheet" href="{% static 'css/content.css' %}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bwar3am</title>
@@ -37,9 +38,9 @@
 
         <div class="main">
             <h2 id="contenttitle">TITLE HEADING</h2>
-            <h5 id="contentinfo">released , Dec 7, 2017</h5>
-            <div class="contentiamge" >
-                <img  id="imagecontent"  src="Bwar3am.jpg" alt="">
+            <h5 id="contentinfo" >released , Dec 7, 2017</h5>
+            <div class="contentiamge"">
+                <img  id="imagecontent"  src="{%static 'pics/Bwar3am.jpg'%} " alt=""  ">
             </div>
             <p>Some text..</p>
             <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
