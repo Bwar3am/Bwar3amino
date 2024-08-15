@@ -1,8 +1,8 @@
-
-<!DOCTYPE html>
+{% extends 'base.html' %}
 {% load static %}
-{% block content  %}
-<html lang="en">
+<!DOCTYPE html>
+
+{% comment %} <html lang="en">
 <head>
     <link rel="stylesheet" href="{%static 'css/index1.css'%}">
     <link rel="icon" type="image/x-icon" href="{%static 'icon3.jfif' %}">
@@ -25,9 +25,9 @@
         <a href="https://github.com/Bwar3am"><i class="fa fa-github"></i></a>
         <a href=" https://t.me/Bwar3am"><i class="fa fa-telegram"></i></a>
         <a href=" https://t.me/Bwar3am"><i class="fa fa-pinterest"></i></a>
-    </div>
+    </div> {% endcomment %}
 
-    
+    {% block content %}
     <div class="row">
         <div class="side">
             <a href="{% url "about" %}"><h2>About Author</h2></a>
@@ -35,7 +35,7 @@
                 <img src="{%static 'pics/Bwar3am.jpg'%} " alt="amoobarsam">
             </div> 
             <p>Barsam is an electrical engineering student and loves python and he is currently working with django to developing webapplications</p>
-            <p>if you wnat to know more about him click bellow link</p>
+            <p>if you wnat to know more about him click on the bellow link</p>
             <a href="{% url "about" %}">abot barsam</a>
             
             {% comment %} <div class="fakeimg" style="height:60px;">Image</div><br>
@@ -71,8 +71,9 @@
             <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p> {% endcomment %}
         </div>
     </div>
+    {% endblock content %}
 
-    <div class="footer">
+    {% comment %} <div class="footer">
         <a href="https://www.instagram.com/barsam.h.aski?utm_source=qr&igsh=MXZ0NzA5a3V0dzdvZQ=="><i class="fa fa-instagram"></i></a>
         <a href="https://x.com/AskiBarsam?t=YHmvBXJmdjPkg-HJ4dmlfQ&s=03"><i class="fa fa-twitter"></i></a>
         <a href="https://www.linkedin.com/in/barsam-hassanzadeh-askii?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa fa-linkedin"></i></a>
@@ -80,8 +81,7 @@
         <a href=" https://t.me/Bwar3am"><i class="fa fa-telegram"></i></a>
         <a href=" https://t.me/Bwar3am"><i class="fa fa-pinterest"></i></a>
         <p>&copy; 2024 Bwar3am</p>
-    </div> 
+    </div>  {% endcomment %}
 
-    {% endblock content  %}
 </body>
 </html>

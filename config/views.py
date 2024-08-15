@@ -13,3 +13,8 @@ def home(request):
 
 def about(request):
     return render (request , "aboutme.html")
+
+def author(request):
+    info = author.objects.all()
+    context = {"info" : info}
+    return render(request, "index1.html" , context)
