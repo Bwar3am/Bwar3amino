@@ -12,7 +12,7 @@ body {
     text-align: center;
     color: aliceblue;
     background-color: rgb(226, 236, 236);
-    background-image: url(dark.jpg);
+    background-image: url("/static/pics/dark.jpg");
 }
 
 /* .header h1{
@@ -41,7 +41,7 @@ body {
 .row{
     display: flex;
     flex-wrap: wrap;
-    background-color: #625d5d;
+    background-color: #090909;
 }
 
 
@@ -59,14 +59,17 @@ body {
     background-color: #625d5d;
 }
 
-
-/* .fakeimg {
-    background-color: #aaa;
+div.gallery {
+    float: left;
     width: 100%;
-    padding: 20px;
-} */
+    padding: 6px;
+    max-width: 100%;
+}
 
-/* Footer */
+
+
+
+
 .footer {
     padding: 5px;
     text-align: center;
@@ -81,6 +84,10 @@ body {
     color: black;
 }
 
+.fakeimg img{
+    width: 40%;
+    border-radius: 50%;
+}
 
 
 .contentiamge{
