@@ -39,7 +39,9 @@
         <div class="main">
             
             <h2 id="contenttitle">{{info.title}}</h2>
-            <h5 id="contentinfo" >released {{info.time_created}}</h5>
+            <h5 id="contentinfo" >released on {{info.date}}  at  {{ info.time_created}}</h5> 
+            
+
             {% comment %} <h5>written by {{content.username}}</h5> {% endcomment %}
             <div class="contentiamge"">
                 <img  id="imagecontent"  src="{{info.image.url}}" alt=""  ">
