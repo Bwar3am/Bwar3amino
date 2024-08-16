@@ -20,7 +20,8 @@ def author(request):
     return render(request, "index1.html" , context)
 
 
-def content(request):
-    info = blog.objects.all()
-    context = {"info":info}
+def content(request , pk ):
+    info = blog.objects.get(id=pk)
+    content = blog.objects.get(id=pk)
+    context = {"info":info , "content":content}
     return render(request ,"content.html" , context )

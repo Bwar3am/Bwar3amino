@@ -44,11 +44,13 @@
         </div>
 
         <div class="main">
-
-            <a href="{% url "content" %}"><h1>Recent Blogs</h1></a>
-            <br>
+            <h1>Recent Blogs</h1>
             {% for blogs in info  %}
-            <h2>{{blogs.title}}</h2>
+            {% comment %} <a href="{% url "content" blogs.pk %}"><h1>Recent Blogs</h1></a> {% endcomment %}
+            
+            <br>
+            
+            <a href="{% url "content" blogs.pk %}"><h2>{{blogs.title}}</h2></a>
             <h5>{{blogs.time_created}}</h5>
             <h5>{{blogs.date}}</h5>
             <div class="gallery">
