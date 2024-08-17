@@ -51,8 +51,7 @@
             <br>
             
             <a href="{% url "content" blogs.pk %}"><h2>{{blogs.title}}</h2></a>
-            <h5>{{blogs.time_created}}</h5>
-            <h5>{{blogs.date}}</h5>
+            <h5>{{blogs.time_created}} {{blogs.date}}</h5>
             <div class="gallery">
                 <br>
                 <img src="{{blogs.image}}" alt="the barsam">
