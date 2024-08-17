@@ -25,3 +25,7 @@ def content(request , pk ):
     content = blog.objects.get(id=pk)
     context = {"info":info , "content":content}
     return render(request ,"content.html" , context )
+
+
+def register(request):
+    return render(request , "register.html")

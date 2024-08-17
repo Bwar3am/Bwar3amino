@@ -59,6 +59,12 @@ body {
     background-color: #625d5d;
 }
 
+
+.main a{
+    color: orange;
+}
+
+
 div.gallery {
     float: left;
     width: 100%;
