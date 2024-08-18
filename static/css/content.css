@@ -86,9 +86,13 @@ body {
 
 
 .contentiamge{
-    width: 100%;
     border-radius: 20%;
     text-align: center;
+}
+
+
+.contentiamge img{
+    width: 50%;
 }
 
 
