@@ -15,9 +15,30 @@ body {
     background-image: url("/static/pics/dark.jpg");
 }
 
-/* .header h1{
-    color: aliceblue;
-} */
+.navbar2{
+    display: flex;
+    background-color: black;
+}
+
+.navbar2 button{
+    padding: 10px;
+    text-decoration: none;
+}
+.navbar2 a{
+    text-decoration: none;
+    color: #090909;
+}
+
+/* .navbar2 button:hover{
+    background-color : orange;
+    color: black;
+    
+}  */
+
+
+
+
+
 
 
 .navbar{
@@ -28,6 +49,10 @@ body {
 .navbar a{
     padding: 10px;
     text-decoration: none;
+}
+
+.navbar button{
+    float: right;
 }
 
 
@@ -71,6 +96,22 @@ div.gallery {
     padding: 6px;
     max-width: 100%;
 }
+
+
+.button{
+    
+    background-color: aqua;
+    border: none;
+    color: black;
+    padding: 10px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 6px;
+   
+}
+
+
 
 
 
