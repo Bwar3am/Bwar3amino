@@ -98,6 +98,10 @@ div.gallery {
 }
 
 
+.gallery img{
+    width: 40%;
+}
+
 .button{
     
     background-color: aqua;
