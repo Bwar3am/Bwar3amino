@@ -29,11 +29,17 @@ body {
     color: #090909;
 }
 
-/* .navbar2 button:hover{
+.navbar2 a:hover{
     background-color : rgb(13, 13, 12);
-    color: aqua;
+    color: green;
     
-}   */
+}   
+
+.navbar2 button:hover{
+    background-color : rgb(13, 13, 12);
+    
+    
+}  
 
 
 
