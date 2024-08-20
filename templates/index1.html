@@ -45,13 +45,14 @@
 
         <div class="main">
             <h1>Recent Blogs</h1>
-            {% for blogs in info  %}
+            {% for blogs in info   %}
             {% comment %} <a href="{% url "content" blogs.pk %}"><h1>Recent Blogs</h1></a> {% endcomment %}
             
             <br>
             
             <a  id="indextitle"   href="{% url "content" blogs.pk %}"><h2>{{blogs.title}}</h2></a>
             <h5>{{blogs.time_created}} {{blogs.date}}</h5>
+            <h5>views: {{blogs.view_count}}</h5>
             <div class="gallery">
                 <img src="{{blogs.image}}" alt="the barsam">
             </div>

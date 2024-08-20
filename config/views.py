@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render , get_object_or_404
 
 from .models import *
 
@@ -23,7 +23,10 @@ def author(request):
 def content(request , pk ):
     info = blog.objects.get(id=pk)
     content = blog.objects.get(id=pk)
-    context = {"info":info , "content":content}
+    # counting = get_object_or_404(blog , id=pk )
+    info.view_count = info.view_count + 1
+    info.save()
+    context = {"info":info , "content":content } 
     return render(request ,"content.html" , context )
 
 
