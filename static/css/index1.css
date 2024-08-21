@@ -20,7 +20,21 @@ body {
     background-color: black;
 }
 
-.navbar2 button{
+
+.pagination{
+    padding-top: 20px;
+    padding-left: 155px;
+    padding-bottom: 10px;
+}
+
+.pagination a{
+    margin: 20px;
+}
+
+
+
+
+/* .navbar2 button{
     padding: 10px;
     text-decoration: none;
 }
@@ -39,7 +53,22 @@ body {
     background-color : rgb(13, 13, 12);
     
     
-}  
+}   */
+
+.navbar2 button{
+    padding: 10px;
+    text-decoration: none;
+}
+
+.navbar2 button:hover{
+    background-color : greenyellow;
+    color: black;
+}
+
+.navbar2 a{
+    color: #090909;
+    text-decoration: none;
+}
 
 
 

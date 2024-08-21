@@ -26,6 +26,7 @@
         <a href=" https://t.me/Bwar3am"><i class="fa fa-telegram"></i></a>
         <a href=" https://t.me/Bwar3am"><i class="fa fa-pinterest"></i></a>
     </div> {% endcomment %}
+  
 
     {% block content %}
     <div class="row">
@@ -45,7 +46,7 @@
 
         <div class="main">
             <h1>Recent Blogs</h1>
-            {% for blogs in info   %}
+            {% for blogs in page_obj  %}
             {% comment %} <a href="{% url "content" blogs.pk %}"><h1>Recent Blogs</h1></a> {% endcomment %}
             
             <br>
@@ -70,6 +71,21 @@
             <div class="fakeimg" style="height:200px;">Image</div>
             <p>Some text..</p>
             <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p> {% endcomment %}
+            <br>
+            <div class="pagination">
+                {% if page_obj.has_previous %}
+                <a href="?page=1">&laquo; first</a>
+                <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+            {% endif %}
+            <span class="current">
+                Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+            </span>
+    
+            {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}">next</a>
+                <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+            {% endif %}
+            </div>
         </div>
     </div>
     {% endblock content %}

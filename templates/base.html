@@ -10,6 +10,27 @@
     <title>Bwar3amino</title>
 </head>
 <body>
+    {% comment %} <script>
+        function loadItems() {
+            $.ajax({
+                url: "{% url 'get_items' %}",
+                type: "GET",
+                success: function(response) {
+                    var itemsContainer = $('#items-container');
+                    itemsContainer.empty();
+                    response.items.forEach(function(item) {
+                        itemsContainer.append('<p>' + item.name + '</p>');
+                    });
+                }
+            });
+        }
+
+        // Load items every 10 seconds
+        setInterval(loadItems, 10000);
+
+        // Initial load
+        loadItems();
+    </script> {% endcomment %}
 
     <div class="navbar2">
         <button class="button"><a href="{% url 'register' %}">Register</a></button>

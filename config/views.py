@@ -7,7 +7,10 @@ from .models import *
 
 def home(request):
     info = blog.objects.all()
-    context = {"info":info}
+    pagechanger = Paginator(info , 4)
+    page_number = request.GET.get("page")
+    page_obj = pagechanger.get_page(page_number)
+    context = {"info":info , "page_obj":page_obj}
     return render(request , "index1.html" , context)
 
 
