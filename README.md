@@ -1,2 +1,2 @@
 # Bwar3amblog
- a cool multiplate website and i can share my ideas and posts in the there 
+ a cool multiplate and  with cool Facilitates  to share my blogs on it 
