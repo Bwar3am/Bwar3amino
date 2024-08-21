@@ -24,12 +24,12 @@ def content(request , pk ):
     info = blog.objects.get(id=pk)
     content = blog.objects.get(id=pk)
     paginator = Paginator(info, 6)
-    page_number = request.GET.get('page')
-    page_obj = paginator.get_page(page_number)
+    # page_number = request.GET.get('page')
+    # page_obj = paginator.get_page(page_number)
     
     info.view_count += 1
     info.save()
-    context = {"info":info , "content":content , 'page_obj': page_obj} 
+    context = {"info":info , "content":content}
     return render(request ,"content.html" , context )
 
 
