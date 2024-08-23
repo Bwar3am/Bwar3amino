@@ -34,10 +34,11 @@
 
     <div class="navbar2">
         {% if user.is_authenticated %}
-        <h4>Hi {{ user.username }}!</h4>
+        <h4>Hi {{ user.username }}!</h4> <a id="profile"   href="{% url 'profile' %}">Click here and go to complete your profile</a>
+        
         {% else %}
-        <button class="button"><a href="{% url 'register' %}">Register</a></button>
-        <button class="button"><a href="{% url 'register' %}">Login</a></button>
+        <button class="button"><a href="{% url 'signup' %}">Register</a></button>
+        <button class="button"><a href="{% url 'login' %}">Login</a></button>
         {% endif %}
 
 
