@@ -139,16 +139,18 @@ button{
         <div class="shape"></div>
         <div class="shape"></div>
     </div>
-    <form>
+    <form method="post">
+        {% csrf_token %}
+        {% load widget_tweaks %}
         <h3>Login Here</h3>
 
-        <label for="username">Username</label>
-        <input type="text" placeholder="Email or Phone" id="username">
+        <label for="username"></label>
+        {% render_field form.username placeholder=form.username.label class+="form-control"  %}
 
-        <label for="password">Password</label>
-        <input type="password" placeholder="Password" id="password">
+        <label for="password"></label>
+        {% render_field form.password placeholder=form.password.label class+="form-control"  %}
 
-        <button>Log In</button>
+        <button type="submit">Log In</button>
         <div class="social">
           <div class="go"><i class="fab fa-google"></i>  Google</div>
           <div class="fb"><i class="fab fa-facebook"></i>  Facebook</div>

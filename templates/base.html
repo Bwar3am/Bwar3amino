@@ -33,8 +33,12 @@
     </script> {% endcomment %}
 
     <div class="navbar2">
+        {% if user.is_authenticated %}
+        <h4>Hi {{ user.username }}!</h4>
+        {% else %}
         <button class="button"><a href="{% url 'register' %}">Register</a></button>
         <button class="button"><a href="{% url 'register' %}">Login</a></button>
+        {% endif %}
 
 
     </div>
