@@ -7,7 +7,7 @@ from .views import CustomLogoutView
 
 urlpatterns = [
     path("signup/", SignUpView.as_view(), name="signup"),
-    path("profile/" , views.profile , name="profile" ),
+    # path("profile/" , views.profile , name="profile" ),
     # path("logout/", auth_views.LogoutView.as_view(template_name='registration/logged_out.html',next_page=None), name="logout")
     path('logout/', CustomLogoutView.as_view(), name='logout')
 ]

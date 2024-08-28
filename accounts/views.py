@@ -16,5 +16,5 @@ class CustomLogoutView(LogoutView):
     next_page = reverse_lazy('home')    
     
     
-def profile(request):
-    return render( request , "profile.html" )    
+# def profile(request):
+#     return render( request , "profile.html" )    
