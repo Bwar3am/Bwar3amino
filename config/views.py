@@ -2,8 +2,6 @@ from django.shortcuts import render , get_object_or_404
 from django.core.paginator import Paginator
 from .models import *
 from django.shortcuts import redirect
-
-
 # Create your views here.
 
 
@@ -42,12 +40,16 @@ def register(request):
     return render(request , "register.html")
 
 
-def profile_view(request):
-    if request.method == 'POST':
-        form = users(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('profile_success')
-    else:
-        form = users()
-    return render(request, 'profile.html', {'form': form})
+# def profile_view(request):
+#     if request.method == 'POST':
+#         form = UserProfileForm(request.POST)
+#         if form.is_valid():
+#             form.save()
+#             return redirect('profile_success')
+#     else:
+#         form = UserProfileForm()
+#     return render(request, 'profile.html', {'form': form})
+
+
+# def succses(request):
+#     return render(request , )
