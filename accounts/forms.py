@@ -1,9 +1,15 @@
 from django import forms
-from .models import users
+from .models import userinfo
 
 
-class UserProfileForm(forms.ModelForm):
+# class UserProfileForm(forms.ModelForm):
+#     class Meta:
+#         model = users
+#         fields = ['name', 'last_name' ,'profile_image', 'bio']
+
+
+class userprofile(forms.ModelForm):
     class Meta:
-        model = users
-        fields = ['name', 'last_name' ,'profile_image', 'bio']
+        model = userinfo
+        fields  = [     'job' , 'country' , 'city' , 'bio']
         

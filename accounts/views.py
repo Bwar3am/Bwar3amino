@@ -3,7 +3,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.urls import reverse_lazy
 from django.views.generic import CreateView 
 from django.contrib.auth.views import LogoutView
-from .forms import UserProfileForm
+from .forms import userprofile
 
 
 
@@ -20,14 +20,14 @@ class CustomLogoutView(LogoutView):
 
 def profile_view(request):
     if request.method == 'POST':
-        form = UserProfileForm(request.POST)
+        form = userprofile(request.POST)
         if form.is_valid():
-            form.save()
-            return redirect('success')
+             form.save()
+             return redirect('home')
     else:
-        form = UserProfileForm()
+         form = userprofile()
     return render(request, 'profile.html', {'form': form})   
 
 
 def succses(request):
-    return render(request , "success.html")
+     return render(request , "success.html")
