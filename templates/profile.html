@@ -1,10 +1,10 @@
 {% if user.is_authenticated %}
 <p>Hi {{ user.username }}!</p>
-<form action="" method="post">
-    {% csrf_token %}
-    {{form.as_p}}
-    <button type="submit">confirm</button>
 
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Upload</button>
 </form>
 
 

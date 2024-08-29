@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'config',
     'widget_tweaks',
+    "django_social_share",
     'accounts',
 ]
 
@@ -133,3 +134,5 @@ STATICFILES_DIRS = [
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL = "/" 
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+
+

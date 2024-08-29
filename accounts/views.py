@@ -20,12 +20,12 @@ class CustomLogoutView(LogoutView):
 
 def profile_view(request):
     if request.method == 'POST':
-        form = userprofile(request.POST)
+        form = userprofile(request.POST , request.FILES)
         if form.is_valid():
-             form.save()
-             return redirect('home')
+            form.save()
+            return redirect('home')
     else:
-         form = userprofile()
+        form = userprofile()
     return render(request, 'profile.html', {'form': form})   
 
 

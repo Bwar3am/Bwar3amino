@@ -11,5 +11,5 @@ from .models import userinfo
 class userprofile(forms.ModelForm):
     class Meta:
         model = userinfo
-        fields  = [     'job' , 'country' , 'city' , 'bio']
+        fields  = ('job' , 'country' , 'city' , 'bio' , 'profile_image')
         
