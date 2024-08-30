@@ -2,15 +2,17 @@ from django.shortcuts import render , get_object_or_404
 from django.core.paginator import Paginator
 from .models import *
 from django.shortcuts import redirect
+from accounts.models import userinfo
 # Create your views here.
 
 
 def home(request):
+    
     info = blog.objects.all()
     pagechanger = Paginator(info , 4)
     page_number = request.GET.get("page")
     page_obj = pagechanger.get_page(page_number)
-    context = {"info":info , "page_obj":page_obj}
+    context = {"info":info , "page_obj":page_obj }
     return render(request , "index1.html" , context)
 
 

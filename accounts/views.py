@@ -4,6 +4,7 @@ from django.urls import reverse_lazy
 from django.views.generic import CreateView 
 from django.contrib.auth.views import LogoutView
 from .forms import userprofile
+from .models import *
 
 
 
@@ -14,7 +15,9 @@ class SignUpView(CreateView):
     
     
 class CustomLogoutView(LogoutView):
-    next_page = reverse_lazy('home')    
+    next_page = reverse_lazy('home') 
+    
+    
     
 
 
@@ -31,3 +34,17 @@ def profile_view(request):
 
 def succses(request):
      return render(request , "success.html")
+ 
+ 
+# def profiledispaly(request , pk):
+#     profile = userinfo.objects.get(pk=id)
+#     context = {"profile" : profile}
+    
+#     return render (request , "index1.html" , context)
+     
+ 
+ 
+ 
+      
+ 
+ 

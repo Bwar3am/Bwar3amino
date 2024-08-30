@@ -34,7 +34,7 @@
 
     <div class="navbar2">
         {% if user.is_authenticated %}
-        <img src="pics/Bwar3am.jpg" alt="profile">
+        <img src="{{user.userinfo.profile_image.url}}" alt="profile">
         <h4>Hi {{ user.username }}!</h4> <a id="profile"   href="{% url 'profile' %}">Click here and go to complete your profile</a>
         
         {% else %}
