@@ -35,7 +35,7 @@
     <div class="navbar2">
         {% if user.is_authenticated %}
         <img src="{{user.userinfo.profile_image.url}}" alt="profile">
-        <h4>Hi {{ user.username }}!</h4> <a id="profile"   href="{% url 'profile' %}">Click here and go to complete your profile</a>
+        <h4>Hi {{ user.username }}!</h4> <a id="profile"   href="{% url 'profile' %}">Your Profile</a>
         
         {% else %}
         <button class="button"><a href="{% url 'signup' %}">Register</a></button>
@@ -73,7 +73,20 @@
     
     {% endblock content %}
 
+    <div class="pagination" id="page">
+        {% if page_obj.has_previous %}
+        <a href="?page=1">&laquo; first</a>
+        <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+        {% endif %}
+        <span class="current">
+            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+        </span>
 
+        {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}">next</a>
+            <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+        {% endif %}
+    </div> 
 
 
 

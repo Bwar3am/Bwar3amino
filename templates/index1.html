@@ -36,16 +36,16 @@
                 <img src="{%static 'pics/Bwar3am.jpg'%} " alt="amoobarsam">
             </div> 
             <p>Barsam is an electrical engineering student and loves python and he is currently working with django to developing webapplications</p>
-            <p>if you wnat to know more about him click on the bellow link</p>
-            <a href="{% url "about" %}">abot barsam</a>
+            
+            
             
             {% comment %} <div class="fakeimg" style="height:60px;">Image</div><br>
             <div class="fakeimg" style="height:60px;">Image</div><br>
             <div class="fakeimg" style="height:60px;">Image</div>  {% endcomment %}
-        </div>
+    </div>
 
         <div class="main">
-            <h1>Recent Blogs</h1>
+            <h2>Recent Blogs</h2>
             {% for blogs in page_obj  %}
             {% comment %} <a href="{% url "content" blogs.pk %}"><h1>Recent Blogs</h1></a> {% endcomment %}
             
@@ -61,33 +61,24 @@
             <div class="bodyy">
                 <h4>{{blogs.body}}</h4>
             </div>
-            
-
-           
             {% endfor %}
-            {% comment %} <br>
-            <h2>TITLE HEADING</h2>
-            <h5>Title description, Sep 2, 2017</h5>
-            <div class="fakeimg" style="height:200px;">Image</div>
-            <p>Some text..</p>
-            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p> {% endcomment %}
-            <br>
-            <div class="pagination">
-                {% if page_obj.has_previous %}
-                <a href="?page=1">&laquo; first</a>
-                <a href="?page={{ page_obj.previous_page_number }}">previous</a>
-            {% endif %}
-            <span class="current">
-                Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
-            </span>
-    
-            {% if page_obj.has_next %}
-                <a href="?page={{ page_obj.next_page_number }}">next</a>
-                <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
-            {% endif %}
-            </div>
         </div>
+
+        <div class="rightside">
+                <h2>the most viewed posts</h2>
+                <br>
+                <h2>TITLE HEADING</h2>
+                <h5>Title description, Dec 7, 2017</h5>
+                <div class="fakeimg" style="height:200px;">Image</div>
+                <p>Some text..</p>
+                <br>
+                <h2>TITLE HEADING</h2>
+                <h5>Title description, Sep 2, 2017</h5>
+                <div class="fakeimg" style="height:200px;">Image</div>
+                <p>Some text..</p>
+        </div> 
     </div>
+</div>
     {% endblock content %}
 
     {% comment %} <div class="footer">
