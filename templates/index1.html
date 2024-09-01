@@ -67,9 +67,29 @@
         <div class="rightside">
                 <h2>the most viewed posts</h2>
                 <br>
-                <h3>TITLE HEADING</h3>
-                <h5>Title description, Dec 7, 2017</h5>
-                <div class="fakeimg" style="height:200px;">Image</div>
+                <h3>{{mvp.title}}</h3>
+                <h5>{{mvp.time_created}} {{mvp.date}}</h5>
+                <div class="gallery" id="rightcolumn">
+                    <img src="{{mvp.image}}" alt="the barsam">
+                </div>
+                
+                
+                <br>
+                <br>
+                <h3 id="also">also read </h3>
+                <br>
+                
+                <h3>{{fvp.title}}</h3>
+                <h5>{{fvp.time_created}} {{fvp.date}}</h5>
+                <div class="gallery" id="rightcolumn">
+                    <img src="{{fvp.image}}" alt="the barsam">
+                </div>
+
+                
+                {% comment %} <div class="gallery">
+                    <img src="{{mvp.image}}" alt="the barsam">
+                </div> {% endcomment %}
+                {% comment %} <div class="fakeimg" style="height:200px;">Image</div> {% endcomment %}
                 
                 
         </div> 

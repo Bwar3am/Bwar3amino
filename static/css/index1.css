@@ -149,6 +149,10 @@ body {
     color: orange;
 }
 
+#rightcolumn{
+    width:100% ;
+}
+
 
 .rightside{
     flex: 25%;
@@ -165,6 +169,10 @@ div.gallery {
     width: 100%;
     padding: 6px;
     max-width: 100%;
+}
+
+#also{
+    padding-top: 10px;
 }
 
 

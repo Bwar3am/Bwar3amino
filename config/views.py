@@ -7,12 +7,13 @@ from accounts.models import userinfo
 
 
 def home(request):
-    
+    mvp= blog.objects.order_by('-view_count').first()
+    fvp = blog.objects.order_by("view_count").first()
     info = blog.objects.all()
     pagechanger = Paginator(info , 4)
     page_number = request.GET.get("page")
     page_obj = pagechanger.get_page(page_number)
-    context = {"info":info , "page_obj":page_obj }
+    context = {"info":info , "page_obj":page_obj , "mvp" : mvp , "fvp":fvp }
     return render(request , "index1.html" , context)
 
 
@@ -24,6 +25,11 @@ def author(request):
     context = {"info" : info}
     return render(request, "index1.html" , context)
 
+# def most_viewed(request):
+#     mvp= blog.objects.order_by('-view_count').first()
+#     context = {"mvp" : mvp}
+#     return render(request , "index1.html" , context)
+
 
 def content(request , pk ):
     info = blog.objects.get(id=pk)
@@ -34,7 +40,7 @@ def content(request , pk ):
     
     info.view_count += 1
     info.save()
-    context = {"info":info , "content":content}
+    context = {"info":info , "content":content }
     return render(request ,"content.html" , context )
 
 
