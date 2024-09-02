@@ -67,7 +67,7 @@
         <div class="rightside">
                 <h2>the most viewed posts</h2>
                 <br>
-                <h3>{{mvp.title}}</h3>
+                <a  id="indextitle"   href="{% url "content" mvp.pk %}"><h3>{{mvp.title}}</h3></a>
                 <h5>{{mvp.time_created}} {{mvp.date}}</h5>
                 <div class="gallery" id="rightcolumn">
                     <img src="{{mvp.image}}" alt="the barsam">
@@ -79,7 +79,7 @@
                 <h3 id="also">also read </h3>
                 <br>
                 
-                <h3>{{fvp.title}}</h3>
+                <a  id="indextitle"   href="{% url "content" fvp.pk %}"><h3>{{fvp.title}}</h3></a>
                 <h5>{{fvp.time_created}} {{fvp.date}}</h5>
                 <div class="gallery" id="rightcolumn">
                     <img src="{{fvp.image}}" alt="the barsam">
