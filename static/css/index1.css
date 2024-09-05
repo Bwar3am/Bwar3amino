@@ -20,12 +20,43 @@ body {
     background-color: black;
 }
 
-.navbar2 img{
+/* .navbar2 img{
     width: 4%;
     padding: 5px;
     border-radius: 50%;
 
+} */
+
+
+.dispalying{
+    display: flex;
+    float: left;
+    
+
 }
+
+
+
+.dispalying img{
+    width: 15%;
+    border-radius: 50%;
+    padding-top: 4px;
+}
+
+.dispalying a{
+   
+    
+    display: flex;
+    /* width: 350px; /* Sets the width of the link */
+    
+}
+
+.dispalying h4{
+    padding-top: 10px;
+}
+
+
+
 
 .fvp{
     padding-top:100px ;

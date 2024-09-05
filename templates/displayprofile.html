@@ -6,6 +6,13 @@
     <title>display</title>
 </head>
 <body>
+    <div class="username">
+        <h4>Hi {{ user.username }}!</h4> <a id="profile"   href="{% url 'profile' %}">Your Profile</a>
+    </div>
+    <br>
+    
     <img src="{{user.userinfo.profile_image.url}}" alt="prof">
+
+   
 </body>
 </html>

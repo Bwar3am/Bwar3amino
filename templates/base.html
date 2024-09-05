@@ -34,8 +34,11 @@
 
     <div class="navbar2">
         {% if user.is_authenticated %}
-        <img src="{{user.userinfo.profile_image.url}}" alt="profile">
-        <h4>Hi {{ user.username }}!</h4> <a id="profile"   href="{% url 'profile' %}">Your Profile</a>
+
+        <div class="dispalying">
+            <a href="{% url 'displaying' %}"><img src="{{user.userinfo.profile_image.url}}" alt="profile"><h4>Hi {{ user.username }}!</h4></a>
+        </div>
+       
         
         {% else %}
         <button class="button"><a href="{% url 'signup' %}">Register</a></button>
