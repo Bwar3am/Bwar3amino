@@ -11,5 +11,6 @@ urlpatterns = [
     path("profile/" , views.profile_view , name="profile" ),
     # path("logout/", auth_views.LogoutView.as_view(template_name='registration/logged_out.html',next_page=None), name="logout")
     path('logout/', CustomLogoutView.as_view(), name='logout'),
-    path('succsess' , views.succses , name="success")
+    path('succsess' , views.succses , name="success"),
+    path("dispaly" , views.displayprofile , name="displaying")
 ]

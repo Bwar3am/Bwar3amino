@@ -19,6 +19,12 @@ class CustomLogoutView(LogoutView):
     
     
     
+def displayprofile(request):
+    
+    return render(request , "displayprofile.html")
+    
+    
+    
 
 
 def profile_view(request):

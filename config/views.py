@@ -20,6 +20,10 @@ def home(request):
     return render(request , "index1.html" , context)
 
 
+    
+    
+
+
 def about(request):
     return render (request , "aboutme.html")
 
