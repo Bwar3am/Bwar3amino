@@ -35,9 +35,7 @@
     <div class="navbar2">
         {% if user.is_authenticated %}
 
-        <div class="dispalying">
-            <a href="{% url 'displaying' %}"><img src="{{user.userinfo.profile_image.url}}" alt="profile"><h4>Hi {{ user.username }}!</h4></a>
-        </div>
+        <img src="{{user.userinfo.profile_image.url}}" alt="profile"><h4>Hi {{ user.username }}!</h4> <a href="{% url 'displaying' %}"><h3>view your account</h3></a>
        
         
         {% else %}
