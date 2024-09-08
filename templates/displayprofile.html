@@ -7,7 +7,7 @@
 </head>
 <body>
     <div class="username">
-        <h4>Hi {{ user.username }}!</h4> <a id="profile"   href="{% url 'profile' %}">Your Profile</a>
+        <h4>Hi {{ user.username }}!</h4> <a id="profile"   href="{% url 'updateprofile' user.id %}">Your Profile</a>
     </div>
     <br>
     

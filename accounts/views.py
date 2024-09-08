@@ -3,7 +3,8 @@ from django.contrib.auth.forms import UserCreationForm
 from django.urls import reverse_lazy
 from django.views.generic import CreateView 
 from django.contrib.auth.views import LogoutView
-from .forms import userprofile
+from django.views.generic.edit import UpdateView
+from .forms import userprofile , updateprofile
 from .models import *
 
 
@@ -22,6 +23,13 @@ class CustomLogoutView(LogoutView):
 def displayprofile(request):
     
     return render(request , "displayprofile.html")
+
+
+class updateprofile(UpdateView):
+    model = userinfo
+    form_class = updateprofile
+    template_name = 'updateprofile.html'
+    success_url = reverse_lazy('displaying')
     
     
     

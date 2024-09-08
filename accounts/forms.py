@@ -13,3 +13,9 @@ class userprofile(forms.ModelForm):
         model = userinfo
         fields  = ('job' , 'country' , 'city' , 'bio' , 'profile_image')
         
+        
+class updateprofile(forms.ModelForm):
+    class Meta:
+        model = userinfo
+        fields  = ('job' , 'country' , 'city' , 'bio' , 'profile_image')       
+        
