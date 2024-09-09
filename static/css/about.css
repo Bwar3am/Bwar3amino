@@ -50,6 +50,11 @@ p a{
     color: black;
 }
 
+p button:hover{
+    background-color : rgb(47, 234, 255);
+    color: black;
+}
+
 
 .flex-container {
 
