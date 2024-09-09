@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{% comment %} <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -23,5 +23,79 @@
 
 
    
+</body>
+</html> {% endcomment %}
+
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{%static 'css/about.css'%}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="https://www.instagram.com/barsam.h.aski?utm_source=qr&igsh=MXZ0NzA5a3V0dzdvZQ=="><i class="fa fa-instagram"></i></a>
+        <a href="https://x.com/AskiBarsam?t=YHmvBXJmdjPkg-HJ4dmlfQ&s=03"><i class="fa fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/barsam-hassanzadeh-askii?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa fa-linkedin"></i></a>
+        <a href="https://github.com/Bwar3am"><i class="fa fa-github"></i></a>
+        <a href=" https://t.me/Bwar3am"><i class="fa fa-telegram"></i></a>
+        <a href=" https://t.me/Bwar3am"><i class="fa fa-pinterest"></i></a>
+    </div>
+    
+    <div class="header">
+        <img src="{{user.userinfo.profile_image.url}}" alt="profileimage">
+        <div class="text">
+            <h2>{{ user.username }}</h2>
+            <p>{{user.userinfo.job}}
+            </p>
+            
+        </div>
+    </div>
+
+    <div class="flex-container">
+        <div>
+            <h3>About</h3>
+            <p>{{user.userinfo.bio}}</p>
+            
+            <br>
+            <p><button href="{% url 'password_change' %}">Password Change</button></p>
+            <form action="{% url 'logout' %}" method="post">
+                {% csrf_token %}
+                <button type="submit">Log Out</button>
+            </form>
+
+            {% comment %} <div>
+                <a href="https://www.instagram.com/barsam.h.aski?utm_source=qr&igsh=MXZ0NzA5a3V0dzdvZQ=="><i class="fa fa-instagram"></i></a>
+                <a href="https://x.com/AskiBarsam?t=YHmvBXJmdjPkg-HJ4dmlfQ&s=03"><i class="fa fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/barsam-hassanzadeh-askii?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa fa-linkedin"></i></a>
+                <a href="https://github.com/Bwar3am"><i class="fa fa-github"></i></a>
+                <a href=" https://t.me/Bwar3am"><i class="fa fa-telegram"></i></a>
+                <a href=" https://t.me/Bwar3am"><i class="fa fa-pinterest"></i></a>
+            </div> {% endcomment %}
+        </div>
+                   
+    </div>
+
+
+    <!-- <div class="footer">
+        <div>
+            <a href="https://www.instagram.com/barsam.h.aski?utm_source=qr&igsh=MXZ0NzA5a3V0dzdvZQ=="><i class="fa fa-instagram"></i></a>
+            <a href="https://x.com/AskiBarsam?t=YHmvBXJmdjPkg-HJ4dmlfQ&s=03"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/barsam-hassanzadeh-askii?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa fa-linkedin"></i></a>
+            <a href="https://github.com/Bwar3am"><i class="fa fa-github"></i></a>
+            <a href=" https://t.me/Bwar3am"><i class="fa fa-telegram"></i></a>
+            <a href=" https://t.me/Bwar3am"><i class="fa fa-pinterest"></i></a>
+        </div>
+    </div> -->
+   
+
+ 
 </body>
 </html>

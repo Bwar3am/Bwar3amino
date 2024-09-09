@@ -42,6 +42,12 @@ body {
 .header img{
     border-radius: 50%;
     width: 20%;
+    height: 300px;
+}
+
+p a{
+    text-decoration: none;
+    color: black;
 }
 
 
@@ -60,6 +66,16 @@ body {
     width: 33.33%;
     
     
+}
+
+form button{
+    padding: 10px;
+    text-decoration: none;
+}
+
+form button:hover{
+    background-color : rgb(47, 234, 255);
+    color: black;
 }
 
 /* .footer{
