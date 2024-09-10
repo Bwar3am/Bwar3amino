@@ -4,6 +4,7 @@ from django.contrib.auth.views import LogoutView
 from django.contrib.auth import views as auth_views
 from .views import SignUpView
 from .views import CustomLogoutView
+from django.contrib.auth.views import PasswordChangeDoneView
 from .views import *
 
 urlpatterns = [
@@ -13,5 +14,7 @@ urlpatterns = [
     path('logout/', CustomLogoutView.as_view(), name='logout'),
     path('succsess' , views.succses , name="success"),
     path("dispaly" , views.displayprofile , name="displaying"),
-    path("updateprofile/<int:pk>/edit" , updateprofile.as_view() , name="updateprofile")
+    path("updateprofile/<int:pk>/edit" , updateprofile.as_view() , name="updateprofile"),
+    path('password/', CustomPasswordChangeView.as_view(), name='change_password'),
+    path('password/done/', PasswordChangeDoneView.as_view(template_name='registration/password_change_done.html'), name='password_change_done')
 ]

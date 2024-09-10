@@ -5,6 +5,9 @@ from django.views.generic import CreateView
 from django.contrib.auth.views import LogoutView
 from django.views.generic.edit import UpdateView
 from .forms import userprofile , updateprofile
+from django.contrib.auth.forms import PasswordChangeForm
+from django.contrib.auth.views import PasswordChangeView
+from django.contrib.auth.forms import PasswordChangeForm
 from .models import *
 
 
@@ -21,8 +24,14 @@ class CustomLogoutView(LogoutView):
     
     
 def displayprofile(request):
-    
     return render(request , "displayprofile.html")
+
+
+class CustomPasswordChangeView(PasswordChangeView):
+    form_class = PasswordChangeForm
+    success_url = reverse_lazy('password_change_done')
+    template_name = "registration/change_password.html"
+
 
 
 class updateprofile(UpdateView):
@@ -30,6 +39,10 @@ class updateprofile(UpdateView):
     form_class = updateprofile
     template_name = 'updateprofile.html'
     success_url = reverse_lazy('displaying')
+    
+    
+
+ 
     
     
     

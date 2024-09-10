@@ -65,11 +65,14 @@
             <p>{{user.userinfo.bio}}</p>
             
             <br>
-            <p><button href="{% url 'password_change' %}">Password Change</button></p>
+            <p><button><a href="{% url 'change_password' %}">Password Change</a></button></p>
+            <br>
             <form action="{% url 'logout' %}" method="post">
                 {% csrf_token %}
                 <button type="submit">Log Out</button>
             </form>
+            <br>
+            <p><button><a href="{% url 'home' %}">Back to Home!!</a></button></p>
 
             {% comment %} <div>
                 <a href="https://www.instagram.com/barsam.h.aski?utm_source=qr&igsh=MXZ0NzA5a3V0dzdvZQ=="><i class="fa fa-instagram"></i></a>
