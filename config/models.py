@@ -49,15 +49,19 @@ class blog(models.Model):
             return url
         
 
-# class users(models.Model):
-#     name = models.CharField(max_length=100)
-#     last_name = models.CharField(max_length=100)
-#     bio = models.CharField(max_length=500)
-#     profile_image = models.ImageField(upload_to="pis/" , blank=True , null=True) 
-    
-    
-#     def __str__(self):
-#         return self.name        
+class Comment(models.Model):
+    post = models.ForeignKey(blog,on_delete=models.CASCADE,related_name='comments')
+    name = models.CharField(max_length=80)
+    email = models.EmailField()
+    body = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+    active = models.BooleanField(default=False)
+
+    class Meta:
+        ordering = ['created_on']
+
+    def __str__(self):
+        return 'Comment {} by {}'.format(self.body, self.name)     
         
         
         

@@ -67,14 +67,14 @@ body {
 } */
 
 /* Footer */
-.footer {
+.comment {
     padding: 5px;
     text-align: center;
     background-color: black;
 
 }
 
-.footer h5{
+.comment h5{
     color: aliceblue;
 }
 

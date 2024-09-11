@@ -3,6 +3,10 @@ from django.core.paginator import Paginator
 from .models import *
 from django.shortcuts import redirect
 from accounts.models import userinfo
+from .forms import *
+from django.views.generic.edit import FormView
+from django.urls import reverse_lazy
+from .forms import CommentForm
 # Create your views here.
 
 
@@ -41,30 +45,16 @@ def author(request):
 def content(request , pk ):
     info = blog.objects.get(id=pk)
     content = blog.objects.get(id=pk)
-    paginator = Paginator(info, 6)
-    # page_number = request.GET.get('page')
-    # page_obj = paginator.get_page(page_number)
-    
     info.view_count += 1
     info.save()
     context = {"info":info , "content":content }
     return render(request ,"content.html" , context )
 
 
+
+
+
 def register(request):
     return render(request , "register.html")
 
 
-# def profile_view(request):
-#     if request.method == 'POST':
-#         form = UserProfileForm(request.POST)
-#         if form.is_valid():
-#             form.save()
-#             return redirect('profile_success')
-#     else:
-#         form = UserProfileForm()
-#     return render(request, 'profile.html', {'form': form})
-
-
-# def succses(request):
-#     return render(request , )
