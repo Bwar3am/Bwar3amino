@@ -6,8 +6,7 @@ from accounts.models import userinfo
 from .forms import *
 from django.views.generic.edit import FormView
 from django.urls import reverse_lazy
-from .forms import CommentForm
-# Create your views here.
+
 
 
 def home(request):
