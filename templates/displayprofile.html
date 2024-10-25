@@ -63,7 +63,8 @@
         <div>
             <h3>About</h3>
             <p>{{user.userinfo.bio}}</p>
-            
+            <br>
+            <p><button><a href="{% url 'updateprofile' user.id %}">update yoor profile</a></button></p>
             <br>
             <p><button><a href="{% url 'change_password' %}">Password Change</a></button></p>
             <br>
