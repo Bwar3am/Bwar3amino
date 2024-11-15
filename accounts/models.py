@@ -15,12 +15,12 @@ class userinfo(models.Model):
     def __str__(self):
         return self.user.username
     
-def create_profile(sender , instance , created , **kwargs):
-    if created:
-        user_profile = userinfo(user=instance)
-        user_profile.save()
+# def create_profile(sender , instance , created , **kwargs):
+#     if created:
+#         user_profile = userinfo(user=instance)
+#         user_profile.save()
 
-post_save.connect(create_profile , sender=User)
+# post_save.connect(create_profile , sender=User)
 
 
     
