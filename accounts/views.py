@@ -9,6 +9,9 @@ from django.contrib.auth.forms import PasswordChangeForm
 from django.contrib.auth.views import PasswordChangeView
 from django.contrib.auth.forms import PasswordChangeForm
 from .models import *
+from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
+
 
 
 
@@ -39,13 +42,7 @@ class updateprofile(UpdateView):
     form_class = updateprofile
     template_name = 'updateprofile.html'
     success_url = reverse_lazy('displaying')
-    
-    
 
- 
-    
-    
-    
 
 
 def profile_view(request):
@@ -63,11 +60,7 @@ def succses(request):
      return render(request , "success.html")
  
  
-# def profiledispaly(request , pk):
-#     profile = userinfo.objects.get(pk=id)
-#     context = {"profile" : profile}
-    
-#     return render (request , "index1.html" , context)
+
      
  
  
