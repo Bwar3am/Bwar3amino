@@ -145,10 +145,10 @@ button{
         <h3>Login Here</h3>
 
         <label for="username"></label>
-        {% render_field form.username placeholder=form.username.label class+="form-control"  %}
+        {% comment %} {% render_field form.username placeholder=form.username.label class+="form-control"  %} {% endcomment %}
 
         <label for="password"></label>
-        {% render_field form.password placeholder=form.password.label class+="form-control"  %}
+        {% comment %} {% render_field form.password placeholder=form.password.label class+="form-control"  %} {% endcomment %}
 
         <button type="submit">Log In</button>
         <div class="social">
